@@ -5,7 +5,7 @@ module CurrentCart
   
   def set_cart
     @cart = Cart.find(session[:cart_id])
-  rescue e
+  rescue Exception => e
     puts e.message
     @cart = Cart.create
     session[:cart_id] = @cart.id
