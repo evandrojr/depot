@@ -3,6 +3,9 @@ require 'test_helper'
 class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
+    @product.image_url = "evandro.jpg"
+    @product.price = 9
+    @product.title = rand
   end
 
   test "should get index" do
