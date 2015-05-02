@@ -1,57 +1,51 @@
-// Place all the styles related to the Products controller here.
+// Place all the styles related to the Store controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* START_HIGHLIGHT */
-/*
-
 .products {
-  table {
-    border-collapse: collapse;
+  h1 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    font:  150% sans-serif;
+    color: #226;
+    border-bottom: 3px dotted #77d;
   }
 
-  table tr td {
-    padding: 5px;
-    vertical-align: top;
-    font-size:    larger;
-    color: blue;
-  }
+  /* An entry in the store catalog */
+  .entry {
+    overflow: auto;
+    margin-top: 1em;
+    border-bottom: 1px dotted #77d;
+    min-height: 100px;
 
-  .list_image {
-    width:  60px;
-    height: 70px;
-  }
-
-  .list_description {
-    width: 60%;
-
-    dl {
-      margin: 0;
+    img {
+      width: 80px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      // position: absolute;
     }
 
-    dt {
-      color:        #244;
-      font-weight:  bold;
-      font-size:    larger;
+    h3 {
+      font-size: 120%;
+      font-family: sans-serif;
+      margin-left: 100px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #227;
     }
 
-    dd {
-      margin: 0;
+    p, div.price_line {
+      margin-left: 100px;
+      margin-top: 0.5em; 
+      margin-bottom: 0.8em; 
     }
-  }
 
-  .list_actions {
-    font-size:    x-small;
-    text-align:   right;
-    padding-left: 1em;
-  }
-
-  .list_line_even {
-    background:   #e0f8f8;
-  }
-
-  .list_line_odd {
-    background:   #f8b0f8;
+    .price {
+      color: #44a;
+      font-weight: bold;
+      margin-right: 3em;
+    }
   }
 }
 /* END_HIGHLIGHT */

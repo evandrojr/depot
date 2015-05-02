@@ -1,18 +1,31 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
-    <h1>Ta amo amorzinha!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <h1>Loja do dengo</h1>
+    <% if notice %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+    <p></p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
   </div>
 </div>
 
-<div class="container">
+<div class="container store">
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <h2>Promoções da semana!</h2>
+      <% @products.each do |product| %>
+      <div class="entry">
+        <%= image_tag(product.image_url) %>
+        <h3><%= product.title %></h3>
+        <%= sanitize(product.description) %>
+        <div class="price_line">
+          <span class="price"><%= number_to_currency_br(product.price) %></span>
+        </div>
+      </div>
+      <% end %>      
+      
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
@@ -30,6 +43,6 @@
   <hr>
 
   <footer>
-    <p>&copy; Company 2014</p>
+    <p>&copy; DengoTech 2015 </p>
   </footer>
 </div> <!-- /container -->

@@ -2,7 +2,7 @@
 
 <h1>Listing Products</h1>
 
-<table class="table">
+<table class="table products">
   <thead>
     <tr>
       <th>Title</th>
@@ -15,7 +15,7 @@
 
   <tbody>
     <% @products.each do |product| %>
-      <tr>
+      <tr class="entry">
         <td><%= product.title %></td>
         <td><%= image_tag(product.image_url, class: 'list_image') %></td>
         <td><%= truncate(strip_tags(product.description), length: 80) %></td>
